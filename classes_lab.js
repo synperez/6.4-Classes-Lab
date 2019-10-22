@@ -69,3 +69,27 @@ console.log(benji.feed())
 console.log(benji)
 console.log(benji.toString())
 console.log("///////question 4/////////")
+
+// class Temp {
+//     constructor(celsius, fahrenheit, kelvin) {
+//         this.celsius = celsius;
+//         this.fahrenheit = fahrenheit;
+//         this.kelvin = kelvin
+//     }
+// freezingPoint(){
+//     this.celsius = 0 + "°";
+//     this.fahrenheit = 32 + "°";
+//     this.kelvin= -273 + "°"
+// }
+// }
+
+// let cold = new Temp(2,34,-271)
+// console.log(cold);
+
+
+let freezingPoint = {
+    celsius: 0 + "°",
+    fahrenheit: 32 + "°",
+    kelvin: -273 + "°"
+}
+console.log(freezingPoint)
