@@ -61,6 +61,7 @@ class Dog{
         
     }
 }
+console.log('3a-d')
 let benji = new Dog('Benji', 'husky', 'tired', false)
 console.log(benji)
 console.log(benji.playFetch())
@@ -69,27 +70,74 @@ console.log(benji.feed())
 console.log(benji)
 console.log(benji.toString())
 console.log("///////question 4/////////")
+let temp ={
+    celcius: 0,
+    fahrenheit: 32,
+    kelvin: 273
 
-// class Temp {
-//     constructor(celsius, fahrenheit, kelvin) {
-//         this.celsius = celsius;
-//         this.fahrenheit = fahrenheit;
-//         this.kelvin = kelvin
-//     }
-// freezingPoint(){
-//     this.celsius = 0 + "°";
-//     this.fahrenheit = 32 + "°";
-//     this.kelvin= -273 + "°"
-// }
-// }
+    }
+    console.log(temp)
+    function Celcius(celcius){
+        this.celcius = celcius;
+        this.getFahrenheit = function(){
+            return (celcius + 273) * 1.8
+        }
+        this.getKelvin = function(){
+            return (celcius +273)
+        }
+    }
+    let outside = new Celcius(45)
+    console.log(outside.celcius)
+    console.log(outside.getFahrenheit())
+    console.log(outside.getKelvin())
+    Celcius.prototype.isBelowFreezing =function(){
+        if(this.celcius<=0){
+            return true;
+        } else{
+            return false;
+        }
+    }
+    let freezing = new Celcius(-2)
+    console.log(freezing.isBelowFreezing())
+    console.log(outside.isBelowFreezing())
 
-// let cold = new Temp(2,34,-271)
-// console.log(cold);
 
 
-let freezingPoint = {
-    celsius: 0 + "°",
-    fahrenheit: 32 + "°",
-    kelvin: -273 + "°"
+
+console.log('///////////question 5///////////')
+function Movie(name, year, genre, cast, description) {
+    this.name = name;
+    this.year = year;
+    this.genre = genre;
+    this.cast = cast;
+    this.description = description;
+  }
+//   let movie1 = new Movie('Coming to America', '1984', 'comedy', 'Eddie and Arsenio', 'funny AF!');
+// let movie2 = new Movie('Harlem Knights', '1986', 'comedy', 'Eddie and Richard', 'super funny!');
+// Movie.prototype.blurb = function () {
+//   console.log(`${this.name} came out ${this.year} it was a ${this.genre} starring ${this.cast}
+//      and it was ${this.description}`);
+// };
+
+// movie1.blurb();
+// movie2.blurb();
+
+// ## Question 6
+console.log("---------- #6 ----------")
+console.log("A)")
+
+function Vector(x, y) {
+  this.x = x;
+  this.y = y;
 }
-console.log(freezingPoint)
+
+let v1 = new Vector(1, 2)
+let v2 = new Vector(2, 3)
+
+Vector.prototype.plus = function (v) {
+  return this.x + this.x && this.y + this.y
+}
+
+console.log(v1.plus(v2))
+
+console.log(" ")
